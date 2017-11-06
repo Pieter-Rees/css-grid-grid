@@ -9,7 +9,7 @@ const runSequence = require('run-sequence');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-let dev = true;
+var dev = true;
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
