@@ -19,15 +19,16 @@ body {
   outline: 1px solid red;
 }
 
-@mixin css-grid($width, $max-width) {
-  width: 100%;
-  max-width: 75rem;
+@mixin css-grid($grid-type, $width, $max-width) {
+  width: $width;
+  max-width: $max-width;
   margin-right: auto;
   margin-left: auto;
-  display: grid;
+  display: $grid-type;
 }
 
 @mixin grid-columns(
+  $grid-column-gap
   $col1: null,
   $col2: null,
   $col3: null,
@@ -41,10 +42,13 @@ body {
   $col11: null,
   $col12: null
 ) {
-  grid-template-columns: $col1 $col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12
+  grid-column-gap: $grid-column-gap;
+  grid-template-columns: $col1 $col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12;
+
 }
 
 @mixin grid-rows(
+  $grid-row-gap
   $row1: null,
   $row2: null,
   $row3: null,
@@ -56,12 +60,41 @@ body {
   $row9: null,
   $row10: null,
   $row11: null,
-  $row12: null
+  $row12: null,
 ) {
-  grid-template-rows: $row1 $row2 $row3 $row4 $row5 $row6 $row7 $row8 $row9 $row10 $row11 $row12
+  grid-row-gap: $grid-row-gap;
+  grid-template-rows: $row1 $row2 $row3 $row4 $row5 $row6 $row7 $row8 $row9 $row10 $row11 $row12;
 }
 
+// Just an example
+
 .grid-2row-4column {
-  @include grid-columns(25%, 25%, 25%, 25%)
-  @include grid-rows(50%, 50%)
+  @include grid-columns(25%, 25%, 25%, 25%);
+  @include grid-rows(50%, 50%);
+}
+
+
+
+// Crazy auto grid
+
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-c {
+  grid-area: sidebar;
+}
+.item-d {
+  grid-area: footer;
+}
+
+.container {
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
 }
