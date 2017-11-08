@@ -19,12 +19,13 @@ body {
   outline: 1px solid red;
 }
 
-@mixin css-grid($grid-type, $width, $max-width) {
+@mixin css-grid($grid-type, $width, $max-width $grid-alignment) {
   width: $width;
   max-width: $max-width;
   margin-right: auto;
   margin-left: auto;
   display: $grid-type;
+  justify-content: $grid-alignment;
 }
 
 @mixin grid-columns(
@@ -73,7 +74,37 @@ body {
   @include grid-rows(50%, 50%);
 }
 
+.left {
+  justify-content: flex-start;
+}
 
+.hcenter {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.hstretch {
+  justify-content: center;
+}
+
+.top {
+  align-items: flex-start;
+}
+
+.bottom {
+  align-items: flex-end;
+}
+
+.vcenter {
+  align-items: center;
+}
+
+.vstretch {
+  align-items: stretch;
+}
 
 // Crazy auto grid
 
