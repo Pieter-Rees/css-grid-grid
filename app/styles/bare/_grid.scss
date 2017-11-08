@@ -1,0 +1,98 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+* {
+  outline: 1px solid red;
+}
+
+@mixin css-grid($grid-type, $width, $max-width $grid-alignment) {
+  width: $width;
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  display: $grid-type;
+  justify-content: $grid-alignment;
+}
+
+@mixin grid-columns(
+  $grid-column-gap
+  $col1: null,
+  $col2: null,
+  $col3: null,
+  $col4: null,
+  $col5: null,
+  $col6: null,
+  $col7: null,
+  $col8: null,
+  $col9: null,
+  $col10: null,
+  $col11: null,
+  $col12: null
+) {
+  grid-column-gap: $grid-column-gap;
+  grid-template-columns: $col1 $col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12;
+
+}
+
+@mixin grid-rows(
+  $grid-row-gap
+  $row1: null,
+  $row2: null,
+  $row3: null,
+  $row4: null,
+  $row5: null,
+  $row6: null,
+  $row7: null,
+  $row8: null,
+  $row9: null,
+  $row10: null,
+  $row11: null,
+  $row12: null,
+) {
+  grid-row-gap: $grid-row-gap;
+  grid-template-rows: $row1 $row2 $row3 $row4 $row5 $row6 $row7 $row8 $row9 $row10 $row11 $row12;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.hcenter {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.hstretch {
+  justify-content: center;
+}
+
+.top {
+  align-items: flex-start;
+}
+
+.bottom {
+  align-items: flex-end;
+}
+
+.vcenter {
+  align-items: center;
+}
+
+.vstretch {
+  align-items: stretch;
+}
