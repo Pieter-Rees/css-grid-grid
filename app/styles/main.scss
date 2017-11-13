@@ -1,2 +1,180 @@
 @import "bare/mixins";
 @import "bare/grid";
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+* {
+  outline: 1px solid red;
+}
+
+@mixin css-grid(
+  $grid-type,
+  $width: null,
+  $max-width: null,
+  $grid-alignment: null
+  ) {
+  width: $width;
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  display: $grid-type;
+  justify-content: $grid-alignment;
+}
+
+@mixin grid-columns(
+  $col1: null,
+  $col2: null,
+  $col3: null,
+  $col4: null,
+  $col5: null,
+  $col6: null,
+  $col7: null,
+  $col8: null,
+  $col9: null,
+  $col10: null,
+  $col11: null,
+  $col12: null
+) {
+  grid-template-columns: $col1 $col2 $col3 $col4 $col5 $col6 $col7 $col8 $col9 $col10 $col11 $col12;
+
+}
+
+@mixin grid-rows(
+  $row1: null,
+  $row2: null,
+  $row3: null,
+  $row4: null,
+  $row5: null,
+  $row6: null,
+  $row7: null,
+  $row8: null,
+  $row9: null,
+  $row10: null,
+  $row11: null,
+  $row12: null
+
+) {
+  grid-template-rows: $row1 $row2 $row3 $row4 $row5 $row6 $row7 $row8 $row9 $row10 $row11 $row12;
+}
+
+// Childs
+
+@mixin column(
+  $column-start: null,
+  $column-end: null
+) {
+  grid-column-start: $column-start;
+  grid-column-end: $column-end;
+}
+
+@mixin row(
+$row-start: null,
+$row-end: null
+) {
+  grid-row-start: $row-start;
+  grid-row-end: $row-end;
+
+}
+
+// Just an example
+
+.grid-2row-4column {
+  @include css-grid(grid);
+  @include grid-columns(25%, 25%, 25%, 25%);
+  @include grid-rows(33%, 33%, 33%);
+  height: 100vh;
+  font-size: 100px;
+}
+
+
+.item1 {
+  background-color: purple;
+  @include row(1, 4);
+  @include column(1, 3);
+
+}
+
+.item2 {
+  background-color: orange;
+  @include row(2, 4);
+  @include column(3, 4);
+}
+
+.item3 {
+  background-color: lime;
+}
+
+.item4 {
+  background-color: pink;
+  @include row(3, 4);
+}
+
+//
+// .left {
+//   justify-content: flex-start;
+// }
+//
+// .hcenter {
+//   justify-content: center;
+// }
+//
+// .right {
+//   justify-content: flex-end;
+// }
+//
+// .hstretch {
+//   justify-content: center;
+// }
+//
+// .top {
+//   align-items: flex-start;
+// }
+//
+// .bottom {
+//   align-items: flex-end;
+// }
+//
+// .vcenter {
+//   align-items: center;
+// }
+//
+// .vstretch {
+//   align-items: stretch;
+// }
+//
+// // Crazy auto grid
+//
+// .item-a {
+//   grid-area: header;
+// }
+// .item-b {
+//   grid-area: main;
+// }
+// .item-c {
+//   grid-area: sidebar;
+// }
+// .item-d {
+//   grid-area: footer;
+// }
+//
+// .container {
+//   grid-template-columns: 50px 50px 50px 50px;
+//   grid-template-rows: auto;
+//   grid-template-areas:
+//     "header header header header"
+//     "main main . sidebar"
+//     "footer footer footer footer";
+// }

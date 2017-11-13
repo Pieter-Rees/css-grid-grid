@@ -2,10 +2,13 @@
   "name": "css-grid-grid",
   "version": "0.0.2",
   "description": "This is a css-grid grid. It will be a collection of mixins to create youur own grid",
+  
   "main": "gulpfile.js",
   "directories": {
     "test": "test"
   },
+  "dependencies":{},
+
   "devDependencies": {
     "babel-core": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
@@ -48,16 +51,20 @@
   },
   "scripts": {
     "test": "gulp test"
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pieter-Rees/css-grid-grid.git"
   },
   "keywords": [
-    "Css",
-    "Grid",
-    "Css-Grid",
-    "Css-grid-grid"
+    "CSS",
+    "css",
+    "grid",
+    "grid",
+    "css",
+    "grid",
+    "grid"
   ],
   "author": "Pieter Rees",
   "license": "ISC",
