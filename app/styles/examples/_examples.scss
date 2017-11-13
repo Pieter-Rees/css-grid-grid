@@ -1,0 +1,30 @@
+// Crazy auto grid
+
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-c {
+  grid-area: sidebar;
+}
+.item-d {
+  grid-area: footer;
+}
+
+.container {
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+// Just an example
+
+.grid-2row-4column {
+  @include grid-columns(25%, 25%, 25%, 25%);
+  @include grid-rows(50%, 50%);
+}

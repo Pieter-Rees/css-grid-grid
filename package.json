@@ -1,7 +1,8 @@
 {
   "name": "css-grid-grid",
   "version": "0.0.2",
-  "description": "A collection of CSS grid mixins.",
+  "description": "This is a css-grid grid. It will be a collection of mixins to create youur own grid",
+  
   "main": "gulpfile.js",
   "directories": {
     "test": "test"
@@ -49,7 +50,7 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp test"
     "start": "gulp serve"
   },
   "repository": {
