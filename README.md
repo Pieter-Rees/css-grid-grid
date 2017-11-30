@@ -2,10 +2,6 @@
 
 ![Node](https://img.shields.io/node/v/css-grid-grid.svg?style=flat-square)
 [![NPM](https://img.shields.io/npm/v/css-grid-grid.svg?style=flat-square)](https://www.npmjs.com/package/css-grid-grid)
-[![Travis](https://img.shields.io/travis/pieter-rees/css-grid-grid/master.svg?style=flat-square)](https://travis-ci.org/pieter-rees/css-grid-grid)
-[![David](https://img.shields.io/david/pieter-rees/css-grid-grid.svg?style=flat-square)](https://david-dm.org/pieter-rees/css-grid-grid)
-[![Coverage Status](https://img.shields.io/coveralls/pieter-rees/css-grid-grid.svg?style=flat-square)](https://coveralls.io/github/pieter-rees/css-grid-grid)
-[![NPM](https://img.shields.io/npm/dt/css-grid-grid.svg?style=flat-square)](https://www.npmjs.com/package/css-grid-grid)
 
 > this is a description
 
