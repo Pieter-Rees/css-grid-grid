@@ -71,3 +71,7 @@ We are open to contributions, see [CONTRIBUTING.md](CONTRIBUTING.md) for more in
 ### Misc
 
 This module was created using [generator-module-boilerplate](https://github.com/duivvv/generator-module-boilerplate).
+
+
+Feel free
+💰💰💰 http://paypal.me/pieterrees 💰💰💰
