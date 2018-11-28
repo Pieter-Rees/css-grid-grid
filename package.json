@@ -1,6 +1,6 @@
 {
   "name": "css-grid-grid",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "This is a css-grid grid. It will be a collection of mixins to create youur own grid",
   "main": "gulpfile.js",
   "directories": {
