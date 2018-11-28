@@ -17,7 +17,7 @@ body {
   outline: 1px solid red;
 }
 
-@mixin css-grid($grid-type, $width, $max-width $grid-alignment) {
+@mixin css-grid($grid-type, $width, $max-width, $grid-alignment) {
   width: $width;
   max-width: $max-width;
   margin-right: auto;
@@ -27,7 +27,7 @@ body {
 }
 
 @mixin grid-columns(
-  $grid-column-gap
+  $grid-column-gap,
   $col1: null,
   $col2: null,
   $col3: null,
@@ -47,7 +47,7 @@ body {
 }
 
 @mixin grid-rows(
-  $grid-row-gap
+  $grid-row-gap,
   $row1: null,
   $row2: null,
   $row3: null,
